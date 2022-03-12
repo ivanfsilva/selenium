@@ -21,7 +21,7 @@ public class TesteGoogle {
 
     @Test
     public void testeChrome() {
-        System.setProperty("webdriver.gecko.driver", "D:\\Users\\ivanf\\drivers-selenium\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "D:\\Users\\ivanf\\drivers-selenium\\chromedriver.exe");
         WebDriver driver = new ChromeDriver();
         driver.get("http://www.google.com");
 
