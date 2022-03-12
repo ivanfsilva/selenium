@@ -47,4 +47,17 @@ public class CampoTreinamentoTest {
 
         driver.quit();
     }
+
+    @Test
+    public void deveInteragirComCheckBox() {
+        System.setProperty("webdriver.chrome.driver", "D:\\Users\\ivanf\\drivers-selenium\\chromedriver.exe");
+        WebDriver driver = new ChromeDriver();
+        driver.manage().window().setSize(new Dimension(1200, 765));
+
+        driver.get("file:\\" + System.getProperty("user.dir") + "\\src\\main\\resources\\componentes.html");
+        driver.findElement(By.id("elementosForm:comidaFavorita:2")).click();
+        Assert.assertTrue(driver.findElement(By.id("elementosForm:comidaFavorita:2")).isSelected());
+
+        driver.quit();
+    }
 }
